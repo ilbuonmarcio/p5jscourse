@@ -6,7 +6,7 @@ var board;
 var next;
 
 function setup() {
-  createCanvas(720*2, 400*2, WEBGL);
+  createCanvas(1600, 900, WEBGL);
   w = 20;
   // Calculate columns and rows
   columns = floor(width/w);
@@ -27,21 +27,21 @@ function setup() {
 function draw() {
 	//translate(width/2, height/2);
 	orbitControl();
-  background(50);
+  background(0);
   generate();
-  noStroke();
+  stroke(0, 255, 0);
+  translate(-width/2, -height/2);
+  fill(0, 128, 0);
   for ( var i = 0; i < columns;i++) {
     for ( var j = 0; j < rows;j++) {
-	  push();
-      if ((board[i][j] == 1)) stroke(100);
-      else stroke(200);
-      
-      box(i*w, j*w, 0);
-	  pop();
-	  noFill();
+      push();
+      if ((board[i][j] == 1)) {
+        translate(i*w, j*w);
+        box(w, w, w);
+      }      
+      pop();
     }
   }
-
 }
 
 // reset board when mouse is pressed
