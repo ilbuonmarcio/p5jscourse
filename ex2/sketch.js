@@ -6,7 +6,7 @@ var board;
 var next;
 
 function setup() {
-  createCanvas(1600, 900, WEBGL);
+  createCanvas(1280, 720, WEBGL);
   w = 20;
   // Calculate columns and rows
   columns = floor(width/w);
@@ -15,7 +15,7 @@ function setup() {
   board = new Array(columns);
   for (var i = 0; i < columns; i++) {
     board[i] = new Array(rows);
-  } 
+  }
   // Going to use multiple 2D arrays and swap them
   next = new Array(columns);
   for (i = 0; i < columns; i++) {
@@ -38,14 +38,14 @@ function draw() {
       if ((board[i][j] == 1)) {
         translate(i*w, j*w);
         box(w, w, w);
-      }      
+      }
       pop();
     }
   }
 }
 
 // reset board when mouse is pressed
-function mousePressed() {
+function keyPressed() {
   init();
 }
 
@@ -92,4 +92,3 @@ function generate() {
   board = next;
   next = temp;
 }
-
