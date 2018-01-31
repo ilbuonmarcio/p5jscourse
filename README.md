@@ -20,7 +20,7 @@
 3) Example three:
   `ellipse`, `canvas`, `ES6 canvas`, `no background drawing`
 
-##### Authors
+### Authors
 
 - Alessandro Marchioro
 - Alberto Venturi
