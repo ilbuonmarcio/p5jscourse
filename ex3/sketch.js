@@ -28,7 +28,7 @@ function setup() {
   circles = new Array();
   num_of_circles = 125;
   for (var i = 0; i < num_of_circles; i++){
-    var color = [random()*255, random()*255, random()*255]
+    var color = [random()*255, random()*255, random()*255];
     circles.push(new Circle(random()*25, random()*width, random()*height, random()*4, random()*3, color));
   }
 }
