@@ -1,6 +1,6 @@
 var video;
 
-var vScale = 6;
+var vScale = 12;
 var rSlider, gSlider, bSlider, brightSlider;
 var angle = 90;
 
@@ -40,7 +40,7 @@ function draw() {
 
       var brightness = brightSlider.value() / 100;
 
-      var w = map(sin(angle), 0, 1, 0, vScale*1.33);
+      var w = map(sin(angle), 0, 1, 0, vScale*0.9);
 
       noStroke();
       fill(r*brightness, g*brightness, b*brightness);
