@@ -28,7 +28,7 @@ function setup() {
   xSpeedSlider = createSlider(-7, 7, 2);
   xSpeedSlider.position(20, 20);
   drops = new Array();
-  num_of_drops = 500;
+  num_of_drops = 150;
 
   color = [
     120, 120, 255
@@ -48,7 +48,7 @@ function setup() {
 }
 
 function draw() {
-  background(20, 20, 100);
+  background(20, 20, 100, 200);
   for(drop of drops){
     drop.move(xSpeedSlider.value());
     stroke(drop.color)

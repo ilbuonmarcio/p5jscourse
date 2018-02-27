@@ -1,6 +1,6 @@
 var video;
 
-var vScale = 12;
+var vScale = 16;
 var rSlider, gSlider, bSlider, brightSlider;
 var angle = 90;
 
@@ -40,14 +40,15 @@ function draw() {
 
       var brightness = brightSlider.value() / 100;
 
-      var w = map(sin(angle), 0, 1, 0, vScale*0.9);
+      var w = map(sin(angle), 0, 1, 0, vScale*0.99);
 
       noStroke();
-      fill(r*brightness, g*brightness, b*brightness);
+      fill(r,g,b);
+      // fill(r*brightness, g*brightness, b*brightness);
       rectMode(CENTER);
       rect(x*vScale, y*vScale, w, w);
     }
   }
 
-  angle += 0.05;
+  angle += 0.01;
 }
