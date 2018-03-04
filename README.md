@@ -1,6 +1,6 @@
 # p5jscourse
 
-###### p5js school course for creative programming!
+###### p5js workshop repository
 
 ### Objectives
 
@@ -9,22 +9,19 @@
 - extend your vision over programming
 - replace scratch, for god's sake
 
-### Examples
+### Examples (without any order)
 
-1) Example one:
-  `camera`, `colors`, `arrays`, `sliders`, `canvas`
-
-2) Example two:
-  `WEBGL`, `gameoflife`, `3d development`, `box`, `translate`
-
-3) Example three:
-  `ellipse`, `canvas`, `ES6 canvas`, `no background drawing`
+- Exercise 1: WebCam and filter-editing
+- Exercise 2: GameOfLife using WebGL
+- Exercise 3: Snow simulator
+- Exercise 4: Paint replica
+- Exercise 5: Draw into buffer
 
 ### Authors
 
-- Alessandro Marchioro
-- Alberto Venturi
-- Damiano Visentini
+- Alberto `BombaVentu` Venturi
+- Damiano `Pise` Visentini
+- Alessandro `Marcioz` Marchioro
 
 ##### License
 
