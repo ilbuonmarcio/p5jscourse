@@ -1,13 +1,24 @@
+/*
+Exercise 4: Paint replica
+
+This is a simple sketch that emulate Paint.
+
+License: MIT
+
+Authors: Alberto Venturi, Damiano Visentini, Alessandro Marchioro
+*/
+
 function setup(){
   createCanvas(500, 500);
-  background(50);
-  noStroke();
+  background(50); // Clear framebuffer with 50, 50, 50 RGB color
+  noStroke(); // Set draw mode "noStroke" for following drawings
 }
 
-function draw(){
+function draw(){}
 
-}
-
+/*
+Function that changes draw mode "fill" color depending on last mouse button pressed
+*/
 function mousePressed(){
   if(mouseButton === LEFT){
     fill(255, 0, 0);
@@ -20,6 +31,10 @@ function mousePressed(){
   }
 }
 
+/*
+Function that draws an ellipse at mouse's current position,
+using mouseX & mouseY global variables
+*/
 function mouseDragged() {
   ellipse(mouseX, mouseY, 25, 25);
 }
