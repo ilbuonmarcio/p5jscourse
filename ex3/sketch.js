@@ -1,6 +1,23 @@
+/*
+Exercise 3: Snow simulator
+
+This is a simple sketch that simulates snow.
+Easy, right?
+
+License: MIT
+
+Authors: Alberto Venturi, Damiano Visentini, Alessandro Marchioro
+*/
+
 var xSpeedSlider;
 
+
+/*
+This is a class that represent's each snow drop
+*/
 class Drop {
+
+  // Class's constructor
   constructor(radius, x, y, yspeed, color){
     this.radius = radius;
     this.x = x;
@@ -9,6 +26,7 @@ class Drop {
     this.color = color;
   }
 
+  // Class method move, called at each frame
   move(value){
     this.xspeed = value;
     this.x += this.xspeed;
@@ -27,6 +45,8 @@ function setup() {
   createCanvas(600, 600);
   xSpeedSlider = createSlider(-7, 7, 2);
   xSpeedSlider.position(20, 20);
+
+  // We create a drop array
   drops = new Array();
   num_of_drops = 150;
 
@@ -34,6 +54,7 @@ function setup() {
     120, 120, 255
   ];
 
+  // We fill the array with random generated drops
   for (var i = 0; i < num_of_drops; i++){
     drops.push(
       new Drop(
@@ -48,10 +69,12 @@ function setup() {
 }
 
 function draw() {
-  background(20, 20, 100, 200);
+  background(20, 20, 100, 200); // Clear the framebuffer
+
+  // JavaScript ES6 loop
   for(drop of drops){
-    drop.move(xSpeedSlider.value());
-    stroke(drop.color)
-    ellipse(drop.x, drop.y, drop.radius);
+    drop.move(xSpeedSlider.value()); // Move the drop by slider's current value
+    stroke(drop.color) // Set draw mode "stroke" to draw drop's border depending on drop's instance color
+    ellipse(drop.x, drop.y, drop.radius); // Draw an ellipse at x = param1, y = param2, r = param3
   }
 }
