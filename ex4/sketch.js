@@ -17,7 +17,8 @@ function setup(){
 function draw(){}
 
 /*
-Function that changes draw mode "fill" color depending on last mouse button pressed
+Function that changes draw mode "fill" color depending on last mouse button pressed,
+using mouseButton global variable
 */
 function mousePressed(){
   if(mouseButton === LEFT){
