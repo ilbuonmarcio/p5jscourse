@@ -19,7 +19,7 @@ If vScale = 4  --> Ratio 1:4
 If vScale = 16 --> Ratio 1:16
 The bigger the vScale, the bigger the pixels on output canvas.
 */
-var vScale = 16;
+var vScale = 8;
 
 var rSlider, gSlider, bSlider, brightSlider;
 
